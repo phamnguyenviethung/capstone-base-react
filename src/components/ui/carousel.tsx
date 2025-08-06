@@ -120,7 +120,7 @@ function Carousel({
     >
       <div
         onKeyDownCapture={handleKeyDown}
-        className={cn("capstone:relative", className)}
+        className={cn("relative", className)}
         role="region"
         aria-roledescription="carousel"
         data-slot="carousel"
@@ -138,13 +138,13 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       ref={carouselRef}
-      className="capstone:overflow-hidden"
+      className="overflow-hidden"
       data-slot="carousel-content"
     >
       <div
         className={cn(
-          "capstone:flex",
-          orientation === "horizontal" ? "capstone:-ml-4" : "capstone:-mt-4 capstone:flex-col",
+          "flex",
+          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className
         )}
         {...props}
@@ -162,8 +162,8 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
       aria-roledescription="slide"
       data-slot="carousel-item"
       className={cn(
-        "capstone:min-w-0 capstone:shrink-0 capstone:grow-0 capstone:basis-full",
-        orientation === "horizontal" ? "capstone:pl-4" : "capstone:pt-4",
+        "min-w-0 shrink-0 grow-0 basis-full",
+        orientation === "horizontal" ? "pl-4" : "pt-4",
         className
       )}
       {...props}
@@ -185,10 +185,10 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "capstone:absolute capstone:size-8 capstone:rounded-full",
+        "absolute size-8 rounded-full",
         orientation === "horizontal"
-          ? "capstone:top-1/2 capstone:-left-12 capstone:-translate-y-1/2"
-          : "capstone:-top-12 capstone:left-1/2 capstone:-translate-x-1/2 capstone:rotate-90",
+          ? "top-1/2 -left-12 -translate-y-1/2"
+          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollPrev}
@@ -196,7 +196,7 @@ function CarouselPrevious({
       {...props}
     >
       <ArrowLeft />
-      <span className="capstone:sr-only">Previous slide</span>
+      <span className="sr-only">Previous slide</span>
     </Button>
   )
 }
@@ -215,10 +215,10 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "capstone:absolute capstone:size-8 capstone:rounded-full",
+        "absolute size-8 rounded-full",
         orientation === "horizontal"
-          ? "capstone:top-1/2 capstone:-right-12 capstone:-translate-y-1/2"
-          : "capstone:-bottom-12 capstone:left-1/2 capstone:-translate-x-1/2 capstone:rotate-90",
+          ? "top-1/2 -right-12 -translate-y-1/2"
+          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollNext}
@@ -226,7 +226,7 @@ function CarouselNext({
       {...props}
     >
       <ArrowRight />
-      <span className="capstone:sr-only">Next slide</span>
+      <span className="sr-only">Next slide</span>
     </Button>
   )
 }

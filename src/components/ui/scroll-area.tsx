@@ -13,12 +13,12 @@ function ScrollArea({
   return (
     <ScrollAreaPrimitive.Root
       data-slot="scroll-area"
-      className={cn("capstone:relative", className)}
+      className={cn("relative", className)}
       {...props}
     >
       <ScrollAreaPrimitive.Viewport
         data-slot="scroll-area-viewport"
-        className="capstone:focus-visible:ring-ring/50 capstone:size-full capstone:rounded-[inherit] capstone:transition-[color,box-shadow] capstone:outline-none capstone:focus-visible:ring-[3px] capstone:focus-visible:outline-1"
+        className="focus-visible:ring-ring/50 size-full rounded-[inherit] transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:outline-1"
       >
         {children}
       </ScrollAreaPrimitive.Viewport>
@@ -38,18 +38,18 @@ function ScrollBar({
       data-slot="scroll-area-scrollbar"
       orientation={orientation}
       className={cn(
-        "capstone:flex capstone:touch-none capstone:p-px capstone:transition-colors capstone:select-none",
+        "flex touch-none p-px transition-colors select-none",
         orientation === "vertical" &&
-          "capstone:h-full capstone:w-2.5 capstone:border-l capstone:border-l-transparent",
+          "h-full w-2.5 border-l border-l-transparent",
         orientation === "horizontal" &&
-          "capstone:h-2.5 capstone:flex-col capstone:border-t capstone:border-t-transparent",
+          "h-2.5 flex-col border-t border-t-transparent",
         className
       )}
       {...props}
     >
       <ScrollAreaPrimitive.ScrollAreaThumb
         data-slot="scroll-area-thumb"
-        className="capstone:bg-border capstone:relative capstone:flex-1 capstone:rounded-full"
+        className="bg-border relative flex-1 rounded-full"
       />
     </ScrollAreaPrimitive.ScrollAreaScrollbar>
   )

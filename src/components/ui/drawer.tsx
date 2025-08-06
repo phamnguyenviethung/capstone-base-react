@@ -35,7 +35,7 @@ function DrawerOverlay({
     <DrawerPrimitive.Overlay
       data-slot="drawer-overlay"
       className={cn(
-        "capstone:data-[state=open]:animate-in capstone:data-[state=closed]:animate-out capstone:data-[state=closed]:fade-out-0 capstone:data-[state=open]:fade-in-0 capstone:fixed capstone:inset-0 capstone:z-50 capstone:bg-black/50",
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
         className
       )}
       {...props}
@@ -54,16 +54,16 @@ function DrawerContent({
       <DrawerPrimitive.Content
         data-slot="drawer-content"
         className={cn(
-          "capstone:group/drawer-content capstone:bg-background capstone:fixed capstone:z-50 capstone:flex capstone:h-auto capstone:flex-col",
-          "capstone:data-[vaul-drawer-direction=top]:inset-x-0 capstone:data-[vaul-drawer-direction=top]:top-0 capstone:data-[vaul-drawer-direction=top]:mb-24 capstone:data-[vaul-drawer-direction=top]:max-h-[80vh] capstone:data-[vaul-drawer-direction=top]:rounded-b-lg capstone:data-[vaul-drawer-direction=top]:border-b",
-          "capstone:data-[vaul-drawer-direction=bottom]:inset-x-0 capstone:data-[vaul-drawer-direction=bottom]:bottom-0 capstone:data-[vaul-drawer-direction=bottom]:mt-24 capstone:data-[vaul-drawer-direction=bottom]:max-h-[80vh] capstone:data-[vaul-drawer-direction=bottom]:rounded-t-lg capstone:data-[vaul-drawer-direction=bottom]:border-t",
-          "capstone:data-[vaul-drawer-direction=right]:inset-y-0 capstone:data-[vaul-drawer-direction=right]:right-0 capstone:data-[vaul-drawer-direction=right]:w-3/4 capstone:data-[vaul-drawer-direction=right]:border-l capstone:data-[vaul-drawer-direction=right]:sm:max-w-sm",
-          "capstone:data-[vaul-drawer-direction=left]:inset-y-0 capstone:data-[vaul-drawer-direction=left]:left-0 capstone:data-[vaul-drawer-direction=left]:w-3/4 capstone:data-[vaul-drawer-direction=left]:border-r capstone:data-[vaul-drawer-direction=left]:sm:max-w-sm",
+          "group/drawer-content bg-background fixed z-50 flex h-auto flex-col",
+          "data-[vaul-drawer-direction=top]:inset-x-0 data-[vaul-drawer-direction=top]:top-0 data-[vaul-drawer-direction=top]:mb-24 data-[vaul-drawer-direction=top]:max-h-[80vh] data-[vaul-drawer-direction=top]:rounded-b-lg data-[vaul-drawer-direction=top]:border-b",
+          "data-[vaul-drawer-direction=bottom]:inset-x-0 data-[vaul-drawer-direction=bottom]:bottom-0 data-[vaul-drawer-direction=bottom]:mt-24 data-[vaul-drawer-direction=bottom]:max-h-[80vh] data-[vaul-drawer-direction=bottom]:rounded-t-lg data-[vaul-drawer-direction=bottom]:border-t",
+          "data-[vaul-drawer-direction=right]:inset-y-0 data-[vaul-drawer-direction=right]:right-0 data-[vaul-drawer-direction=right]:w-3/4 data-[vaul-drawer-direction=right]:border-l data-[vaul-drawer-direction=right]:sm:max-w-sm",
+          "data-[vaul-drawer-direction=left]:inset-y-0 data-[vaul-drawer-direction=left]:left-0 data-[vaul-drawer-direction=left]:w-3/4 data-[vaul-drawer-direction=left]:border-r data-[vaul-drawer-direction=left]:sm:max-w-sm",
           className
         )}
         {...props}
       >
-        <div className="capstone:bg-muted capstone:mx-auto capstone:mt-4 capstone:hidden capstone:h-2 capstone:w-[100px] capstone:shrink-0 capstone:rounded-full capstone:group-data-[vaul-drawer-direction=bottom]/drawer-content:block" />
+        <div className="bg-muted mx-auto mt-4 hidden h-2 w-[100px] shrink-0 rounded-full group-data-[vaul-drawer-direction=bottom]/drawer-content:block" />
         {children}
       </DrawerPrimitive.Content>
     </DrawerPortal>
@@ -75,7 +75,7 @@ function DrawerHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="drawer-header"
       className={cn(
-        "capstone:flex capstone:flex-col capstone:gap-0.5 capstone:p-4 capstone:group-data-[vaul-drawer-direction=bottom]/drawer-content:text-center capstone:group-data-[vaul-drawer-direction=top]/drawer-content:text-center capstone:md:gap-1.5 capstone:md:text-left",
+        "flex flex-col gap-0.5 p-4 group-data-[vaul-drawer-direction=bottom]/drawer-content:text-center group-data-[vaul-drawer-direction=top]/drawer-content:text-center md:gap-1.5 md:text-left",
         className
       )}
       {...props}
@@ -87,7 +87,7 @@ function DrawerFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="drawer-footer"
-      className={cn("capstone:mt-auto capstone:flex capstone:flex-col capstone:gap-2 capstone:p-4", className)}
+      className={cn("mt-auto flex flex-col gap-2 p-4", className)}
       {...props}
     />
   )
@@ -100,7 +100,7 @@ function DrawerTitle({
   return (
     <DrawerPrimitive.Title
       data-slot="drawer-title"
-      className={cn("capstone:text-foreground capstone:font-semibold", className)}
+      className={cn("text-foreground font-semibold", className)}
       {...props}
     />
   )
@@ -113,7 +113,7 @@ function DrawerDescription({
   return (
     <DrawerPrimitive.Description
       data-slot="drawer-description"
-      className={cn("capstone:text-muted-foreground capstone:text-sm", className)}
+      className={cn("text-muted-foreground text-sm", className)}
       {...props}
     />
   )

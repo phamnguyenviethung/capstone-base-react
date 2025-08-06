@@ -66,13 +66,13 @@ function ContextMenuSubTrigger({
       data-slot="context-menu-sub-trigger"
       data-inset={inset}
       className={cn(
-        "capstone:focus:bg-accent capstone:focus:text-accent-foreground capstone:data-[state=open]:bg-accent capstone:data-[state=open]:text-accent-foreground capstone:flex capstone:cursor-default capstone:items-center capstone:rounded-sm capstone:px-2 capstone:py-1.5 capstone:text-sm capstone:outline-hidden capstone:select-none capstone:data-[inset]:pl-8 capstone:[&_svg]:pointer-events-none capstone:[&_svg]:shrink-0 capstone:[&_svg:not([class*=size-])]:size-4",
+        "focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[inset]:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
     >
       {children}
-      <ChevronRightIcon className="capstone:ml-auto" />
+      <ChevronRightIcon className="ml-auto" />
     </ContextMenuPrimitive.SubTrigger>
   )
 }
@@ -85,7 +85,7 @@ function ContextMenuSubContent({
     <ContextMenuPrimitive.SubContent
       data-slot="context-menu-sub-content"
       className={cn(
-        "capstone:bg-popover capstone:text-popover-foreground capstone:data-[state=open]:animate-in capstone:data-[state=closed]:animate-out capstone:data-[state=closed]:fade-out-0 capstone:data-[state=open]:fade-in-0 capstone:data-[state=closed]:zoom-out-95 capstone:data-[state=open]:zoom-in-95 capstone:data-[side=bottom]:slide-in-from-top-2 capstone:data-[side=left]:slide-in-from-right-2 capstone:data-[side=right]:slide-in-from-left-2 capstone:data-[side=top]:slide-in-from-bottom-2 capstone:z-50 capstone:min-w-[8rem] capstone:origin-(--radix-context-menu-content-transform-origin) capstone:overflow-hidden capstone:rounded-md capstone:border capstone:p-1 capstone:shadow-lg",
+        "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[8rem] origin-(--radix-context-menu-content-transform-origin) overflow-hidden rounded-md border p-1 shadow-lg",
         className
       )}
       {...props}
@@ -102,7 +102,7 @@ function ContextMenuContent({
       <ContextMenuPrimitive.Content
         data-slot="context-menu-content"
         className={cn(
-          "capstone:bg-popover capstone:text-popover-foreground capstone:data-[state=open]:animate-in capstone:data-[state=closed]:animate-out capstone:data-[state=closed]:fade-out-0 capstone:data-[state=open]:fade-in-0 capstone:data-[state=closed]:zoom-out-95 capstone:data-[state=open]:zoom-in-95 capstone:data-[side=bottom]:slide-in-from-top-2 capstone:data-[side=left]:slide-in-from-right-2 capstone:data-[side=right]:slide-in-from-left-2 capstone:data-[side=top]:slide-in-from-bottom-2 capstone:z-50 capstone:max-h-(--radix-context-menu-content-available-height) capstone:min-w-[8rem] capstone:origin-(--radix-context-menu-content-transform-origin) capstone:overflow-x-hidden capstone:overflow-y-auto capstone:rounded-md capstone:border capstone:p-1 capstone:shadow-md",
+          "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 max-h-(--radix-context-menu-content-available-height) min-w-[8rem] origin-(--radix-context-menu-content-transform-origin) overflow-x-hidden overflow-y-auto rounded-md border p-1 shadow-md",
           className
         )}
         {...props}
@@ -126,7 +126,7 @@ function ContextMenuItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "capstone:focus:bg-accent capstone:focus:text-accent-foreground capstone:data-[variant=destructive]:text-destructive capstone:data-[variant=destructive]:focus:bg-destructive/10 capstone:dark:data-[variant=destructive]:focus:bg-destructive/20 capstone:data-[variant=destructive]:focus:text-destructive capstone:data-[variant=destructive]:*:[svg]:!text-destructive capstone:[&_svg:not([class*=text-])]:text-muted-foreground capstone:relative capstone:flex capstone:cursor-default capstone:items-center capstone:gap-2 capstone:rounded-sm capstone:px-2 capstone:py-1.5 capstone:text-sm capstone:outline-hidden capstone:select-none capstone:data-[disabled]:pointer-events-none capstone:data-[disabled]:opacity-50 capstone:data-[inset]:pl-8 capstone:[&_svg]:pointer-events-none capstone:[&_svg]:shrink-0 capstone:[&_svg:not([class*=size-])]:size-4",
+        "focus:bg-accent focus:text-accent-foreground data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 dark:data-[variant=destructive]:focus:bg-destructive/20 data-[variant=destructive]:focus:text-destructive data-[variant=destructive]:*:[svg]:!text-destructive [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[inset]:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -144,15 +144,15 @@ function ContextMenuCheckboxItem({
     <ContextMenuPrimitive.CheckboxItem
       data-slot="context-menu-checkbox-item"
       className={cn(
-        "capstone:focus:bg-accent capstone:focus:text-accent-foreground capstone:relative capstone:flex capstone:cursor-default capstone:items-center capstone:gap-2 capstone:rounded-sm capstone:py-1.5 capstone:pr-2 capstone:pl-8 capstone:text-sm capstone:outline-hidden capstone:select-none capstone:data-[disabled]:pointer-events-none capstone:data-[disabled]:opacity-50 capstone:[&_svg]:pointer-events-none capstone:[&_svg]:shrink-0 capstone:[&_svg:not([class*=size-])]:size-4",
+        "focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-sm py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       checked={checked}
       {...props}
     >
-      <span className="capstone:pointer-events-none capstone:absolute capstone:left-2 capstone:flex capstone:size-3.5 capstone:items-center capstone:justify-center">
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
         <ContextMenuPrimitive.ItemIndicator>
-          <CheckIcon className="capstone:size-4" />
+          <CheckIcon className="size-4" />
         </ContextMenuPrimitive.ItemIndicator>
       </span>
       {children}
@@ -169,14 +169,14 @@ function ContextMenuRadioItem({
     <ContextMenuPrimitive.RadioItem
       data-slot="context-menu-radio-item"
       className={cn(
-        "capstone:focus:bg-accent capstone:focus:text-accent-foreground capstone:relative capstone:flex capstone:cursor-default capstone:items-center capstone:gap-2 capstone:rounded-sm capstone:py-1.5 capstone:pr-2 capstone:pl-8 capstone:text-sm capstone:outline-hidden capstone:select-none capstone:data-[disabled]:pointer-events-none capstone:data-[disabled]:opacity-50 capstone:[&_svg]:pointer-events-none capstone:[&_svg]:shrink-0 capstone:[&_svg:not([class*=size-])]:size-4",
+        "focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-sm py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
     >
-      <span className="capstone:pointer-events-none capstone:absolute capstone:left-2 capstone:flex capstone:size-3.5 capstone:items-center capstone:justify-center">
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
         <ContextMenuPrimitive.ItemIndicator>
-          <CircleIcon className="capstone:size-2 capstone:fill-current" />
+          <CircleIcon className="size-2 fill-current" />
         </ContextMenuPrimitive.ItemIndicator>
       </span>
       {children}
@@ -196,7 +196,7 @@ function ContextMenuLabel({
       data-slot="context-menu-label"
       data-inset={inset}
       className={cn(
-        "capstone:text-foreground capstone:px-2 capstone:py-1.5 capstone:text-sm capstone:font-medium capstone:data-[inset]:pl-8",
+        "text-foreground px-2 py-1.5 text-sm font-medium data-[inset]:pl-8",
         className
       )}
       {...props}
@@ -211,7 +211,7 @@ function ContextMenuSeparator({
   return (
     <ContextMenuPrimitive.Separator
       data-slot="context-menu-separator"
-      className={cn("capstone:bg-border capstone:-mx-1 capstone:my-1 capstone:h-px", className)}
+      className={cn("bg-border -mx-1 my-1 h-px", className)}
       {...props}
     />
   )
@@ -225,7 +225,7 @@ function ContextMenuShortcut({
     <span
       data-slot="context-menu-shortcut"
       className={cn(
-        "capstone:text-muted-foreground capstone:ml-auto capstone:text-xs capstone:tracking-widest",
+        "text-muted-foreground ml-auto text-xs tracking-widest",
         className
       )}
       {...props}

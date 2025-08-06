@@ -53,7 +53,7 @@ function ChartContainer({
         data-slot="chart"
         data-chart={chartId}
         className={cn(
-          "capstone:[&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground capstone:[&_.recharts-cartesian-grid_line[stroke=#ccc]]:stroke-border/50 capstone:[&_.recharts-curve.recharts-tooltip-cursor]:stroke-border capstone:[&_.recharts-polar-grid_[stroke=#ccc]]:stroke-border capstone:[&_.recharts-radial-bar-background-sector]:fill-muted capstone:[&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted capstone:[&_.recharts-reference-line_[stroke=#ccc]]:stroke-border capstone:flex capstone:aspect-video capstone:justify-center capstone:text-xs capstone:[&_.recharts-dot[stroke=#fff]]:stroke-transparent capstone:[&_.recharts-layer]:outline-hidden capstone:[&_.recharts-sector]:outline-hidden capstone:[&_.recharts-sector[stroke=#fff]]:stroke-transparent capstone:[&_.recharts-surface]:outline-hidden",
+          "[&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border flex aspect-video justify-center text-xs [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-hidden [&_.recharts-sector]:outline-hidden [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-surface]:outline-hidden",
           className
         )}
         {...props}
@@ -141,7 +141,7 @@ function ChartTooltipContent({
 
     if (labelFormatter) {
       return (
-        <div className={cn("capstone:font-medium", labelClassName)}>
+        <div className={cn("font-medium", labelClassName)}>
           {labelFormatter(value, payload)}
         </div>
       )
@@ -151,7 +151,7 @@ function ChartTooltipContent({
       return null
     }
 
-    return <div className={cn("capstone:font-medium", labelClassName)}>{value}</div>
+    return <div className={cn("font-medium", labelClassName)}>{value}</div>
   }, [
     label,
     labelFormatter,
@@ -171,12 +171,12 @@ function ChartTooltipContent({
   return (
     <div
       className={cn(
-        "capstone:border-border/50 capstone:bg-background capstone:grid capstone:min-w-[8rem] capstone:items-start capstone:gap-1.5 capstone:rounded-lg capstone:border capstone:px-2.5 capstone:py-1.5 capstone:text-xs capstone:shadow-xl",
+        "border-border/50 bg-background grid min-w-[8rem] items-start gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs shadow-xl",
         className
       )}
     >
       {!nestLabel ? tooltipLabel : null}
-      <div className="capstone:grid capstone:gap-1.5">
+      <div className="grid gap-1.5">
         {payload.map((item, index) => {
           const key = `${nameKey || item.name || item.dataKey || "value"}`
           const itemConfig = getPayloadConfigFromPayload(config, item, key)
@@ -186,8 +186,8 @@ function ChartTooltipContent({
             <div
               key={item.dataKey}
               className={cn(
-                "capstone:[&>svg]:text-muted-foreground capstone:flex capstone:w-full capstone:flex-wrap capstone:items-stretch capstone:gap-2 capstone:[&>svg]:h-2.5 capstone:[&>svg]:w-2.5",
-                indicator === "dot" && "capstone:items-center"
+                "[&>svg]:text-muted-foreground flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5",
+                indicator === "dot" && "items-center"
               )}
             >
               {formatter && item?.value !== undefined && item.name ? (
@@ -200,7 +200,7 @@ function ChartTooltipContent({
                     !hideIndicator && (
                       <div
                         className={cn(
-                          "capstone:shrink-0 capstone:rounded-[2px] capstone:border-(--color-border) capstone:bg-(--color-bg)",
+                          "shrink-0 rounded-[2px] border-(--color-border) bg-(--color-bg)",
                           {
                             "h-2.5 w-2.5": indicator === "dot",
                             "w-1": indicator === "line",
@@ -220,18 +220,18 @@ function ChartTooltipContent({
                   )}
                   <div
                     className={cn(
-                      "capstone:flex capstone:flex-1 capstone:justify-between capstone:leading-none",
-                      nestLabel ? "capstone:items-end" : "capstone:items-center"
+                      "flex flex-1 justify-between leading-none",
+                      nestLabel ? "items-end" : "items-center"
                     )}
                   >
-                    <div className="capstone:grid capstone:gap-1.5">
+                    <div className="grid gap-1.5">
                       {nestLabel ? tooltipLabel : null}
-                      <span className="capstone:text-muted-foreground">
+                      <span className="text-muted-foreground">
                         {itemConfig?.label || item.name}
                       </span>
                     </div>
                     {item.value && (
-                      <span className="capstone:text-foreground capstone:font-mono capstone:font-medium capstone:tabular-nums">
+                      <span className="text-foreground font-mono font-medium tabular-nums">
                         {item.value.toLocaleString()}
                       </span>
                     )}
@@ -268,8 +268,8 @@ function ChartLegendContent({
   return (
     <div
       className={cn(
-        "capstone:flex capstone:items-center capstone:justify-center capstone:gap-4",
-        verticalAlign === "top" ? "capstone:pb-3" : "capstone:pt-3",
+        "flex items-center justify-center gap-4",
+        verticalAlign === "top" ? "pb-3" : "pt-3",
         className
       )}
     >
@@ -281,14 +281,14 @@ function ChartLegendContent({
           <div
             key={item.value}
             className={cn(
-              "capstone:[&>svg]:text-muted-foreground capstone:flex capstone:items-center capstone:gap-1.5 capstone:[&>svg]:h-3 capstone:[&>svg]:w-3"
+              "[&>svg]:text-muted-foreground flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3"
             )}
           >
             {itemConfig?.icon && !hideIcon ? (
               <itemConfig.icon />
             ) : (
               <div
-                className="capstone:h-2 capstone:w-2 capstone:shrink-0 capstone:rounded-[2px]"
+                className="h-2 w-2 shrink-0 rounded-[2px]"
                 style={{
                   backgroundColor: item.color,
                 }}

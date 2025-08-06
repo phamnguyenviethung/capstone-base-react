@@ -8,9 +8,9 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
       type={type}
       data-slot="input"
       className={cn(
-        "capstone:file:text-foreground capstone:placeholder:text-muted-foreground capstone:selection:bg-primary capstone:selection:text-primary-foreground capstone:dark:bg-input/30 capstone:border-input capstone:flex capstone:h-9 capstone:w-full capstone:min-w-0 capstone:rounded-md capstone:border capstone:bg-transparent capstone:px-3 capstone:py-1 capstone:text-base capstone:shadow-xs capstone:transition-[color,box-shadow] capstone:outline-none capstone:file:inline-flex capstone:file:h-7 capstone:file:border-0 capstone:file:bg-transparent capstone:file:text-sm capstone:file:font-medium capstone:disabled:pointer-events-none capstone:disabled:cursor-not-allowed capstone:disabled:opacity-50 capstone:md:text-sm",
-        "capstone:focus-visible:border-ring capstone:focus-visible:ring-ring/50 capstone:focus-visible:ring-[3px]",
-        "capstone:aria-invalid:ring-destructive/20 capstone:dark:aria-invalid:ring-destructive/40 capstone:aria-invalid:border-destructive",
+        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
         className
       )}
       {...props}

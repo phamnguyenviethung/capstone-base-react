@@ -5,18 +5,18 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const toggleVariants = cva(
-  "capstone:inline-flex capstone:items-center capstone:justify-center capstone:gap-2 capstone:rounded-md capstone:text-sm capstone:font-medium capstone:hover:bg-muted capstone:hover:text-muted-foreground capstone:disabled:pointer-events-none capstone:disabled:opacity-50 capstone:data-[state=on]:bg-accent capstone:data-[state=on]:text-accent-foreground capstone:[&_svg]:pointer-events-none capstone:[&_svg:not([class*=size-])]:size-4 capstone:[&_svg]:shrink-0 capstone:focus-visible:border-ring capstone:focus-visible:ring-ring/50 capstone:focus-visible:ring-[3px] capstone:outline-none capstone:transition-[color,box-shadow] capstone:aria-invalid:ring-destructive/20 capstone:dark:aria-invalid:ring-destructive/40 capstone:aria-invalid:border-destructive capstone:whitespace-nowrap",
+  "inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium hover:bg-muted hover:text-muted-foreground disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] outline-none transition-[color,box-shadow] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive whitespace-nowrap",
   {
     variants: {
       variant: {
-        default: "capstone:bg-transparent",
+        default: "bg-transparent",
         outline:
-          "capstone:border capstone:border-input capstone:bg-transparent capstone:shadow-xs capstone:hover:bg-accent capstone:hover:text-accent-foreground",
+          "border border-input bg-transparent shadow-xs hover:bg-accent hover:text-accent-foreground",
       },
       size: {
-        default: "capstone:h-9 capstone:px-2 capstone:min-w-9",
-        sm: "capstone:h-8 capstone:px-1.5 capstone:min-w-8",
-        lg: "capstone:h-10 capstone:px-2.5 capstone:min-w-10",
+        default: "h-9 px-2 min-w-9",
+        sm: "h-8 px-1.5 min-w-8",
+        lg: "h-10 px-2.5 min-w-10",
       },
     },
     defaultVariants: {

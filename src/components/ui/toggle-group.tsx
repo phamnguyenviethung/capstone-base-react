@@ -28,7 +28,7 @@ function ToggleGroup({
       data-variant={variant}
       data-size={size}
       className={cn(
-        "capstone:group/toggle-group capstone:flex capstone:w-fit capstone:items-center capstone:rounded-md capstone:data-[variant=outline]:shadow-xs",
+        "group/toggle-group flex w-fit items-center rounded-md data-[variant=outline]:shadow-xs",
         className
       )}
       {...props}
@@ -60,7 +60,7 @@ function ToggleGroupItem({
           variant: context.variant || variant,
           size: context.size || size,
         }),
-        "capstone:min-w-0 capstone:flex-1 capstone:shrink-0 capstone:rounded-none capstone:shadow-none capstone:first:rounded-l-md capstone:last:rounded-r-md capstone:focus:z-10 capstone:focus-visible:z-10 capstone:data-[variant=outline]:border-l-0 capstone:data-[variant=outline]:first:border-l",
+        "min-w-0 flex-1 shrink-0 rounded-none shadow-none first:rounded-l-md last:rounded-r-md focus:z-10 focus-visible:z-10 data-[variant=outline]:border-l-0 data-[variant=outline]:first:border-l",
         className
       )}
       {...props}

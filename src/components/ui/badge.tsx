@@ -5,18 +5,18 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const badgeVariants = cva(
-  "capstone:inline-flex capstone:items-center capstone:justify-center capstone:rounded-md capstone:border capstone:px-2 capstone:py-0.5 capstone:text-xs capstone:font-medium capstone:w-fit capstone:whitespace-nowrap capstone:shrink-0 capstone:[&>svg]:size-3 capstone:gap-1 capstone:[&>svg]:pointer-events-none capstone:focus-visible:border-ring capstone:focus-visible:ring-ring/50 capstone:focus-visible:ring-[3px] capstone:aria-invalid:ring-destructive/20 capstone:dark:aria-invalid:ring-destructive/40 capstone:aria-invalid:border-destructive capstone:transition-[color,box-shadow] capstone:overflow-hidden",
+  "inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
   {
     variants: {
       variant: {
         default:
-          "capstone:border-transparent capstone:bg-primary capstone:text-primary-foreground capstone:[a&]:hover:bg-primary/90",
+          "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
         secondary:
-          "capstone:border-transparent capstone:bg-secondary capstone:text-secondary-foreground capstone:[a&]:hover:bg-secondary/90",
+          "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
         destructive:
-          "capstone:border-transparent capstone:bg-destructive capstone:text-white capstone:[a&]:hover:bg-destructive/90 capstone:focus-visible:ring-destructive/20 capstone:dark:focus-visible:ring-destructive/40 capstone:dark:bg-destructive/60",
+          "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
-          "capstone:text-foreground capstone:[a&]:hover:bg-accent capstone:[a&]:hover:text-accent-foreground",
+          "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
       },
     },
     defaultVariants: {

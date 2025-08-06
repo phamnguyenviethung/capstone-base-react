@@ -8,7 +8,7 @@
     "css": "src/index.css",
     "baseColor": "neutral",
     "cssVariables": true,
-    "prefix": "capstone"
+    "prefix": ""
   },
   "aliases": {
     "components": "@/components",

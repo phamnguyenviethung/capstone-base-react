@@ -12,7 +12,7 @@ function Tabs({
   return (
     <TabsPrimitive.Root
       data-slot="tabs"
-      className={cn("capstone:flex capstone:flex-col capstone:gap-2", className)}
+      className={cn("flex flex-col gap-2", className)}
       {...props}
     />
   )
@@ -26,7 +26,7 @@ function TabsList({
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "capstone:bg-muted capstone:text-muted-foreground capstone:inline-flex capstone:h-9 capstone:w-fit capstone:items-center capstone:justify-center capstone:rounded-lg capstone:p-[3px]",
+        "bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px]",
         className
       )}
       {...props}
@@ -42,7 +42,7 @@ function TabsTrigger({
     <TabsPrimitive.Trigger
       data-slot="tabs-trigger"
       className={cn(
-        "capstone:data-[state=active]:bg-background capstone:dark:data-[state=active]:text-foreground capstone:focus-visible:border-ring capstone:focus-visible:ring-ring/50 capstone:focus-visible:outline-ring capstone:dark:data-[state=active]:border-input capstone:dark:data-[state=active]:bg-input/30 capstone:text-foreground capstone:dark:text-muted-foreground capstone:inline-flex capstone:h-[calc(100%-1px)] capstone:flex-1 capstone:items-center capstone:justify-center capstone:gap-1.5 capstone:rounded-md capstone:border capstone:border-transparent capstone:px-2 capstone:py-1 capstone:text-sm capstone:font-medium capstone:whitespace-nowrap capstone:transition-[color,box-shadow] capstone:focus-visible:ring-[3px] capstone:focus-visible:outline-1 capstone:disabled:pointer-events-none capstone:disabled:opacity-50 capstone:data-[state=active]:shadow-sm capstone:[&_svg]:pointer-events-none capstone:[&_svg]:shrink-0 capstone:[&_svg:not([class*=size-])]:size-4",
+        "data-[state=active]:bg-background dark:data-[state=active]:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -57,7 +57,7 @@ function TabsContent({
   return (
     <TabsPrimitive.Content
       data-slot="tabs-content"
-      className={cn("capstone:flex-1 capstone:outline-none", className)}
+      className={cn("flex-1 outline-none", className)}
       {...props}
     />
   )

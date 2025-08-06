@@ -21,7 +21,7 @@ function Command({
     <CommandPrimitive
       data-slot="command"
       className={cn(
-        "capstone:bg-popover capstone:text-popover-foreground capstone:flex capstone:h-full capstone:w-full capstone:flex-col capstone:overflow-hidden capstone:rounded-md",
+        "bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md",
         className
       )}
       {...props}
@@ -44,15 +44,15 @@ function CommandDialog({
 }) {
   return (
     <Dialog {...props}>
-      <DialogHeader className="capstone:sr-only">
+      <DialogHeader className="sr-only">
         <DialogTitle>{title}</DialogTitle>
         <DialogDescription>{description}</DialogDescription>
       </DialogHeader>
       <DialogContent
-        className={cn("capstone:overflow-hidden capstone:p-0", className)}
+        className={cn("overflow-hidden p-0", className)}
         showCloseButton={showCloseButton}
       >
-        <Command className="capstone:[&_[cmdk-group-heading]]:text-muted-foreground capstone:**:data-[slot=command-input-wrapper]:h-12 capstone:[&_[cmdk-group-heading]]:px-2 capstone:[&_[cmdk-group-heading]]:font-medium capstone:[&_[cmdk-group]]:px-2 capstone:[&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 capstone:[&_[cmdk-input-wrapper]_svg]:h-5 capstone:[&_[cmdk-input-wrapper]_svg]:w-5 capstone:[&_[cmdk-input]]:h-12 capstone:[&_[cmdk-item]]:px-2 capstone:[&_[cmdk-item]]:py-3 capstone:[&_[cmdk-item]_svg]:h-5 capstone:[&_[cmdk-item]_svg]:w-5">
+        <Command className="[&_[cmdk-group-heading]]:text-muted-foreground **:data-[slot=command-input-wrapper]:h-12 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group]]:px-2 [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
         </Command>
       </DialogContent>
@@ -67,13 +67,13 @@ function CommandInput({
   return (
     <div
       data-slot="command-input-wrapper"
-      className="capstone:flex capstone:h-9 capstone:items-center capstone:gap-2 capstone:border-b capstone:px-3"
+      className="flex h-9 items-center gap-2 border-b px-3"
     >
-      <SearchIcon className="capstone:size-4 capstone:shrink-0 capstone:opacity-50" />
+      <SearchIcon className="size-4 shrink-0 opacity-50" />
       <CommandPrimitive.Input
         data-slot="command-input"
         className={cn(
-          "capstone:placeholder:text-muted-foreground capstone:flex capstone:h-10 capstone:w-full capstone:rounded-md capstone:bg-transparent capstone:py-3 capstone:text-sm capstone:outline-hidden capstone:disabled:cursor-not-allowed capstone:disabled:opacity-50",
+          "placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
         {...props}
@@ -90,7 +90,7 @@ function CommandList({
     <CommandPrimitive.List
       data-slot="command-list"
       className={cn(
-        "capstone:max-h-[300px] capstone:scroll-py-1 capstone:overflow-x-hidden capstone:overflow-y-auto",
+        "max-h-[300px] scroll-py-1 overflow-x-hidden overflow-y-auto",
         className
       )}
       {...props}
@@ -104,7 +104,7 @@ function CommandEmpty({
   return (
     <CommandPrimitive.Empty
       data-slot="command-empty"
-      className="capstone:py-6 capstone:text-center capstone:text-sm"
+      className="py-6 text-center text-sm"
       {...props}
     />
   )
@@ -118,7 +118,7 @@ function CommandGroup({
     <CommandPrimitive.Group
       data-slot="command-group"
       className={cn(
-        "capstone:text-foreground capstone:[&_[cmdk-group-heading]]:text-muted-foreground capstone:overflow-hidden capstone:p-1 capstone:[&_[cmdk-group-heading]]:px-2 capstone:[&_[cmdk-group-heading]]:py-1.5 capstone:[&_[cmdk-group-heading]]:text-xs capstone:[&_[cmdk-group-heading]]:font-medium",
+        "text-foreground [&_[cmdk-group-heading]]:text-muted-foreground overflow-hidden p-1 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium",
         className
       )}
       {...props}
@@ -133,7 +133,7 @@ function CommandSeparator({
   return (
     <CommandPrimitive.Separator
       data-slot="command-separator"
-      className={cn("capstone:bg-border capstone:-mx-1 capstone:h-px", className)}
+      className={cn("bg-border -mx-1 h-px", className)}
       {...props}
     />
   )
@@ -147,7 +147,7 @@ function CommandItem({
     <CommandPrimitive.Item
       data-slot="command-item"
       className={cn(
-        "capstone:data-[selected=true]:bg-accent capstone:data-[selected=true]:text-accent-foreground capstone:[&_svg:not([class*=text-])]:text-muted-foreground capstone:relative capstone:flex capstone:cursor-default capstone:items-center capstone:gap-2 capstone:rounded-sm capstone:px-2 capstone:py-1.5 capstone:text-sm capstone:outline-hidden capstone:select-none capstone:data-[disabled=true]:pointer-events-none capstone:data-[disabled=true]:opacity-50 capstone:[&_svg]:pointer-events-none capstone:[&_svg]:shrink-0 capstone:[&_svg:not([class*=size-])]:size-4",
+        "data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}
@@ -163,7 +163,7 @@ function CommandShortcut({
     <span
       data-slot="command-shortcut"
       className={cn(
-        "capstone:text-muted-foreground capstone:ml-auto capstone:text-xs capstone:tracking-widest",
+        "text-muted-foreground ml-auto text-xs tracking-widest",
         className
       )}
       {...props}
